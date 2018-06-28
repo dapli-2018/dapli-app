@@ -1,7 +1,7 @@
 package son.bucket.buckson.dapli
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class main : AppCompatActivity() {
@@ -10,8 +10,8 @@ class main : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Example of a call to a native method
-        sample_text.text = stringFromJNI()
+        var musicAdapter = ListAdapter(this, DataService.MusicData)
+        myListView.adapter = musicAdapter
     }
 
     /**

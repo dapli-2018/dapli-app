@@ -7,35 +7,35 @@
     android:layout_height="72dp">
 
     <ImageView
-        android:id="@+id/chatPhotoImg"
+        android:id="@+id/musicThumbnail"
         android:layout_width="56dp"
         android:layout_height="56dp"
         android:layout_marginBottom="8dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:contentDescription="@string/chatphotoimg"
+        android:contentDescription="@string/musicthumbnail"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/ic_launcher_round" />
 
     <TextView
-        android:id="@+id/chatNameTv"
+        android:id="@+id/musicName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/chatPhotoImg"
-        app:layout_constraintTop_toTopOf="@+id/chatPhotoImg"
+        app:layout_constraintStart_toEndOf="@+id/musicThumbnail"
+        app:layout_constraintTop_toTopOf="@+id/musicThumbnail"
         tools:text="Name" />
 
     <TextView
-        android:id="@+id/chatMessageTv"
+        android:id="@+id/musicSinger"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/chatPhotoImg"
-        app:layout_constraintStart_toStartOf="@+id/chatNameTv"
+        app:layout_constraintBottom_toBottomOf="@+id/musicThumbnail"
+        app:layout_constraintStart_toStartOf="@+id/musicName"
         tools:text="This is contents of chat." />
 </android.support.constraint.ConstraintLayout>

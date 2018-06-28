@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Dapli</string>
     <string name="chatphotoimg" />
+    <string name="musicthumbnail" />
 </resources>
