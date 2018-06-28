@@ -1,19 +1,31 @@
-package son.bucket.buckson.dapli;
+package com.example.shindonggil.dapli_app;
 
-import java.io.File;
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Iterator;
 
-class Lists{
-    String path;
-    //path = Environment.getExternalStorageDirectory().getAbsolutePath() + "/MUSIC";
-
-    File directory = new File(path);
-    File[] files = directory.listFiles();
-
-    List<String> filesNameList = new ArrayList<>();
- 
-    //for (int i=0; i< files.length; i++) {
-    //    filesNameList.add(files[i].getName();
-   // }
+public class MusicList {
+	ArrayList<Music> music_list;
+	
+	// constructor
+	public MusicList(ArrayList<Music> _music_list) {
+		music_list = _music_list;
+	}
+	public MusicList() {
+		music_list = new ArrayList<Music>();
+	}
+	
+	//methods
+	public ArrayList<Music> get_music_list(){return music_list;}
+	public int get_music_list_size(){return music_list.size();}
+	
+	public void add_music(Music _music){
+		if( !music_list.contains(_music))
+			this.music_list.add(_music);
+	}
+	
+	public boolean remove_music(Music _music){return music_list.remove(_music);}
+	
+	public Iterator<Music> get_iterator(){
+		return music_list.iterator();
+	}
 }
