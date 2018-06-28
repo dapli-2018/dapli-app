@@ -1,4 +1,4 @@
-package com.example.shindonggil.dapli_app;
+package prj_class;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -26,4 +26,7 @@ public class PersonalMusicList{
 	
 	public MusicList get_local_music_list() {return local_music_list;}
 	public SpotMusicList get_trip_spots_music_list() { return trip_spots_music_list;}
+	public MusicList get_trip_spots_music_list(String spot) { 
+		return trip_spots_music_list.get_spot_music_list(spot);
+	}
 }

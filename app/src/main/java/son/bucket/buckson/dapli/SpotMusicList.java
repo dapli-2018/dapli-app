@@ -1,4 +1,4 @@
-package com.example.shindonggil.dapli_app;
+package prj_class;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -24,14 +24,14 @@ public class SpotMusicList {
 			Music entry = (Music)iter.next();
 			String spot = entry.get_spot();
 			
-			if( !trip_spots_music_list.containsKey(entry)) {
+			if( !trip_spots_music_list.containsKey(spot)) {
 				MusicList temp_music_list = new MusicList();
 				temp_music_list.add_music(entry);
 				
 				trip_spots_music_list.put(spot, temp_music_list);
 			}
 			else { 
-				trip_spots_music_list.get(entry).add_music(entry);
+				trip_spots_music_list.get(spot).add_music(entry);
 			}
 		}
 	}

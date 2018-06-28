@@ -1,4 +1,4 @@
-package com.example.shindonggil.dapli_app;
+package prj_class;
 
 import java.util.ArrayList;
 
@@ -28,5 +28,17 @@ public class MusicListManager {
 		PersonalMusicList temp_other_music_list = new PersonalMusicList(_other_music_list);
 		others_music_list.add(temp_other_music_list);
 		group_spot_music_list.add_music_list_on_spots(_other_music_list);
+	}
+	
+	public MusicList get_my_music_list() {
+		return this.my_music_list.get_local_music_list();
+	}
+	
+	public MusicList get_my_spot_music_list(String spot) {
+		return this.my_music_list.get_trip_spots_music_list(spot);
+	}
+	
+	public MusicList get_group_spot_music_list(String spot) {
+		return this.group_spot_music_list.get_spot_music_list(spot);
 	}
 }

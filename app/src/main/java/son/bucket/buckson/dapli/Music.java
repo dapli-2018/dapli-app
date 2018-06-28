@@ -1,4 +1,4 @@
-package com.example.shindonggil.dapli_app;
+package prj_class;
 
 public class Music {
 	// Field

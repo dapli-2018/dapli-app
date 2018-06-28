@@ -1,4 +1,4 @@
-package com.example.shindonggil.dapli_app;
+package prj_class;
 
 import java.util.ArrayList;
 import java.util.Iterator;
