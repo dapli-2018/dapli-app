@@ -11,18 +11,28 @@ import android.widget.TextView
 class ListAdapter (val context: Context, val musicData: ArrayList<MusicData>) : BaseAdapter()
 {
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        val musicView: View = LayoutInflater.from(context).inflate(R.layout.music_list_item, null)
+        val musicView: View
+        val holder : ViewHolder
 
-        val musicName: TextView = musicView.findViewById(R.id.musicName)
-        val musicSinger: TextView = musicView.findViewById(R.id.musicSinger)
-        val musicThumbnail: ImageView = musicView.findViewById(R.id.musicThumbnail)
+        if(convertView == null) {
+            musicView = LayoutInflater.from(context).inflate(R.layout.music_list_item, null)
+            holder = ViewHolder()
+            holder.musicName = musicView.findViewById(R.id.musicName)
+            holder.musicSinger = musicView.findViewById(R.id.musicSinger)
+            holder.musicThumbnail = musicView.findViewById(R.id.musicThumbnail)
+
+            musicView.tag = holder
+        } else {
+            holder = convertView.tag as ViewHolder
+            musicView = convertView
+        }
 
         val msc = musicData[position]
 
         val resourceId = context.resources.getIdentifier(msc.photo, "drawable", context.packageName)
-        musicThumbnail.setImageResource(resourceId)
-        musicName.text = msc.name
-        musicSinger.text = msc.singer
+        holder.musicThumbnail?.setImageResource(resourceId)
+        holder.musicName?.text = msc.name
+        holder.musicSinger?.text = msc.singer
 
         return musicView
     }
@@ -37,5 +47,11 @@ class ListAdapter (val context: Context, val musicData: ArrayList<MusicData>) : 
 
     override fun getCount(): Int {
         return musicData.size
+    }
+
+    private class ViewHolder {
+        var musicName : TextView? = null
+        var musicSinger : TextView? = null
+        var musicThumbnail : ImageView? = null
     }
 }
