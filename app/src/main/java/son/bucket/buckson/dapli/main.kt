@@ -3,6 +3,7 @@ package son.bucket.buckson.dapli
 import android.os.Bundle
 import android.support.v4.view.ViewPager
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
 
 class main : AppCompatActivity() {
 
@@ -13,8 +14,11 @@ class main : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+
         var viewPagerAdapter = pagerAdapter(manager)
         viewPagerAdapter.addFrag(home())
+        Log.d("main","size: " + viewPagerAdapter.count)
         viewPager = findViewById(R.id.viewPager)
         viewPager.adapter = viewPagerAdapter
         //var musicAdapter = ListAdapter(this, DataService.MusicData)
