@@ -16,7 +16,7 @@ class FeedAdapter (val context: Context, val feedData: ArrayList<FeedData>) : Ba
         val holder : ViewHolder
 
         if(convertView == null) {
-            feed = LayoutInflater.from(context).inflate(R.layout.mainfeed, null)
+            feed = LayoutInflater.from(context).inflate(R.layout.feed_info, null)
             holder = ViewHolder()
             holder.memoryTitle = feed.findViewById(R.id.memoryTitle)
             holder.memoryDesc = feed.findViewById(R.id.memoryDescirpt)
@@ -29,14 +29,14 @@ class FeedAdapter (val context: Context, val feedData: ArrayList<FeedData>) : Ba
             feed = convertView
         }
 
-        val msc = feedData[position]
+        val fd = feedData[position]
 
-        val resourceId = context.resources.getIdentifier(msc.photo, "drawable", context.packageName)
-        Log.d("Feed", "ID : " + resourceId + "title : " + msc.title + "descirpt : " + msc.text)
+        val resourceId = context.resources.getIdentifier(fd.photo, "drawable", context.packageName)
+        Log.d("Feed", "ID : " + resourceId + "title : " + fd.title + "descirpt : " + fd.text)
         holder.profileImage?.setImageResource(resourceId)
-        holder.memoryTitle?.text = msc.title
-        holder.memoryDesc?.text = msc.text
-        holder.memoryLikes?.text = msc.likes
+        holder.memoryTitle?.text = fd.title
+        holder.memoryDesc?.text = fd.text
+        holder.memoryLikes?.text = fd.likes
 
         return feed
     }

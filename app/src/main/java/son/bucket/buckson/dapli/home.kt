@@ -20,6 +20,7 @@ class home : Fragment() {
 
         Log.d("HOME", "adapter")
         var feedAdapter = FeedAdapter(context, FeedService.FeedData)
+//        feedAdapter.
         feedlist.adapter = feedAdapter
         Log.d("HOME", "add adapter")
     }

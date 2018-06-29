@@ -14,7 +14,7 @@ class GridAdapter (val context: Context, val gridData: ArrayList<GridData>) : Ba
             val grid = gridData[position]
 
         var inflator = context!!.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-        var gridView = inflator.inflate(R.layout.archive_list, null)
+        var gridView = inflator.inflate(R.layout.grid_items, null)
 
         val resourceId = context.resources.getIdentifier(grid.photo, "drawable", context.packageName)
         Log.d("Feed", "ID : " + resourceId)

@@ -7,24 +7,6 @@
     android:layout_height="match_parent"
     tools:context="son.bucket.buckson.dapli.home">
 
-    <GridView
-        android:id="@+id/myGridView"
-        android:layout_width="match_parent"
-        android:layout_height="354dp"
-        android:columnWidth="150dp"
-        android:horizontalSpacing="15dp"
-        android:numColumns="auto_fit"
-        android:verticalSpacing="15dp"
-        app:layout_constraintTop_toBottomOf="@+id/PlayLists" />
-
-    <TextView
-        android:id="@+id/Liketext"
-        android:layout_width="91dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="8dp"
-        android:text="Like"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <ImageView
         android:id="@+id/LikePhoto"
         android:layout_width="143dp"
@@ -33,6 +15,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Liketext"
         app:srcCompat="@drawable/marvingaye" />
+
+    <TextView
+        android:id="@+id/Liketext"
+        android:layout_width="91dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="40dp"
+        android:gravity="center"
+        android:text="Like"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="0dp" />
 
     <ImageView
         android:id="@+id/PickPhoto"
@@ -46,7 +38,8 @@
         android:id="@+id/PickText"
         android:layout_width="88dp"
         android:layout_height="33dp"
-        android:layout_marginStart="104dp"
+        android:layout_marginStart="100dp"
+        android:gravity="center"
         android:text="Pick"
         app:layout_constraintStart_toEndOf="@+id/Liketext"
         app:layout_constraintTop_toTopOf="parent" />
@@ -60,6 +53,19 @@
         android:text="PlayList"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/LikePhoto" />
+
+    <GridView
+        android:id="@+id/myGridView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:columnWidth="150dp"
+        android:horizontalSpacing="15dp"
+        android:numColumns="auto_fit"
+        android:verticalSpacing="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PlayLists" />
 
 
 </android.support.constraint.ConstraintLayout>
