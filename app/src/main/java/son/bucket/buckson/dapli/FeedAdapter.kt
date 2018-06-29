@@ -1,6 +1,7 @@
 package son.bucket.buckson.dapli
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -31,6 +32,7 @@ class FeedAdapter (val context: Context, val feedData: ArrayList<FeedData>) : Ba
         val msc = feedData[position]
 
         val resourceId = context.resources.getIdentifier(msc.photo, "drawable", context.packageName)
+        Log.d("Feed", "ID : " + resourceId)
         holder.profileImage?.setImageResource(resourceId)
         holder.memoryTitle?.text = msc.title
         holder.memoryDesc?.text = msc.text

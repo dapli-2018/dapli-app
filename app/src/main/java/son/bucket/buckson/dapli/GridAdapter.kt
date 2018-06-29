@@ -1,6 +1,7 @@
 package son.bucket.buckson.dapli
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,6 +17,7 @@ class GridAdapter (val context: Context, val gridData: ArrayList<GridData>) : Ba
         var gridView = inflator.inflate(R.layout.archive_list, null)
 
         val resourceId = context.resources.getIdentifier(grid.photo, "drawable", context.packageName)
+        Log.d("Feed", "ID : " + resourceId)
         gridView.memImg.setImageResource(resourceId)
         gridView.memTitle.text = grid.title
 

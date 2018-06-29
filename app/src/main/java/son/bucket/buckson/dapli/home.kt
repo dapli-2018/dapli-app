@@ -6,7 +6,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import kotlinx.android.synthetic.main.music_list.*
+import kotlinx.android.synthetic.main.mainfeed.*
 
 class home : Fragment() {
 
@@ -20,7 +20,7 @@ class home : Fragment() {
 
         Log.d("HOME", "adapter")
         var feedAdapter = FeedAdapter(context, FeedService.FeedData)
-        myListView.adapter = feedAdapter
+        feedlist.adapter = feedAdapter
         Log.d("HOME", "add adapter")
     }
 }

@@ -11,16 +11,16 @@ import kotlinx.android.synthetic.main.music_list.*
 class list : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        Log.d("HOME", "createview")
+        Log.d("LIST", "createview")
         return inflater!!.inflate(R.layout.music_list, null)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        Log.d("HOME", "adapter")
+        Log.d("LIST", "adapter")
         var musicAdapter = ListAdapter(context, DataService.MusicData)
         myListView.adapter = musicAdapter
-        Log.d("HOME", "add adapter")
+        Log.d("LIST", "add adapter")
     }
 }
