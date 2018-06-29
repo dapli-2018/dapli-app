@@ -32,7 +32,7 @@ class FeedAdapter (val context: Context, val feedData: ArrayList<FeedData>) : Ba
         val msc = feedData[position]
 
         val resourceId = context.resources.getIdentifier(msc.photo, "drawable", context.packageName)
-        Log.d("Feed", "ID : " + resourceId)
+        Log.d("Feed", "ID : " + resourceId + "title : " + msc.title + "descirpt : " + msc.text)
         holder.profileImage?.setImageResource(resourceId)
         holder.memoryTitle?.text = msc.title
         holder.memoryDesc?.text = msc.text

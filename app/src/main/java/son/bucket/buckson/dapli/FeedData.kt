@@ -10,4 +10,8 @@ object FeedService{
             FeedData("Stars", "ROTHY", "Jacket_stars","23456"),
             FeedData("DDU-DU DDU-DU", "BLACK PINK", "Jacket_ddududdudu", "11231")
     )
+
+    fun addData(data: FeedData) {
+        FeedData.add(data)
+    }
 }
