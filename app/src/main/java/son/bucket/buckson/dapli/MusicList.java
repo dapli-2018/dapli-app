@@ -1,4 +1,4 @@
-package prj_class;
+package com.example.shindonggil.daummap;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -43,7 +43,7 @@ public class MusicList {
 	
 	public String get_json_music_list() {
 		Iterator<Music> iter = music_list.iterator();
-		String json_music_list= "";
+		String json_music_list= "{\"songs\":[";
 		Music entry = (Music)iter.next();
 		
 		if(entry != null){ json_music_list = get_json_stringify_music(entry);}
@@ -52,12 +52,12 @@ public class MusicList {
 			entry = (Music)iter.next();
 			json_music_list += "," + get_json_stringify_music(entry);
 		}
-		
+
+		json_music_list += "]}";
 		return json_music_list;
 	}
 	
 	private String get_json_stringify_music(Music _entry) {
-		return String.format("\"title\":\"%s\",\"do_play\":%b",
-				_entry.get_title(), _entry.get_do_play());
+		return String.format("[\"%s\",\"%s\",\"%s\",\"%s\"]", _entry.get_title(), _entry.get_artist(), _entry.get_spot(), _entry.get_do_play());
 	}
 }
