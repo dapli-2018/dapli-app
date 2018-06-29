@@ -7,7 +7,7 @@
     android:layout_height="wrap_content">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/Layout"
         android:layout_width="match_parent"
         android:layout_height="157dp"
         android:layout_marginBottom="8dp"
@@ -53,7 +53,7 @@
         android:gravity="center"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/Layout"
         app:layout_constraintTop_toBottomOf="@+id/profile"
         tools:text="Name" />
 
@@ -63,7 +63,7 @@
         android:layout_height="102dp"
         android:layout_marginBottom="8dp"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintBottom_toBottomOf="@+id/Layout"
         app:layout_constraintStart_toStartOf="@+id/memoryTitle"
         app:layout_constraintTop_toBottomOf="@+id/memoryTitle"
         tools:text="This is contents of chat." />
@@ -72,40 +72,44 @@
         android:id="@+id/likebtn"
         android:layout_width="18dp"
         android:layout_height="20dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/heart"
         android:scaleType="fitXY"
-        app:layout_constraintStart_toEndOf="@+id/likesNum"
-        app:layout_constraintTop_toBottomOf="@+id/userName" />
+        app:layout_constraintEnd_toStartOf="@+id/pickNum"
+        app:layout_constraintTop_toTopOf="@+id/Layout" />
 
     <TextView
         android:id="@+id/likesNum"
-        android:layout_width="47dp"
-        android:layout_height="19dp"
-        android:layout_marginStart="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginTop="16dp"
         android:gravity="center"
         android:text="1000"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/userName" />
+        app:layout_constraintEnd_toStartOf="@+id/likebtn"
+        app:layout_constraintTop_toTopOf="@+id/Layout" />
 
     <ImageButton
         android:id="@+id/pickBtn"
         android:layout_width="18dp"
         android:layout_height="20dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/pin"
         android:scaleType="fitXY"
-        app:layout_constraintStart_toEndOf="@+id/pickNum"
-        app:layout_constraintTop_toBottomOf="@+id/likebtn" />
+        app:layout_constraintEnd_toEndOf="@+id/Layout"
+        app:layout_constraintTop_toTopOf="@+id/Layout" />
 
     <TextView
         android:id="@+id/pickNum"
-        android:layout_width="47dp"
-        android:layout_height="19dp"
-        android:layout_marginStart="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginTop="16dp"
         android:gravity="center"
         android:text="1000"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/likesNum" />
+        app:layout_constraintEnd_toStartOf="@+id/pickBtn"
+        app:layout_constraintTop_toTopOf="@+id/Layout" />
 
 </android.support.constraint.ConstraintLayout>
