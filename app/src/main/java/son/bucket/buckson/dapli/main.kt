@@ -20,12 +20,22 @@ class main : AppCompatActivity() {
         viewPagerAdapter.addFrag(repo())
         Log.d("main","size: " + viewPagerAdapter.count)
         viewPager = findViewById(R.id.viewPager)
-        viewPager.adapter = viewPagerAdapter
-        //var musicAdapter = ListAdapter(this, DataService.MusicData)
-        //myListView.adapter = musicAdapter
 
-        //var gridAdapter = GridAdapter(this, GridService.GridData)
-        //myGridView.adapter = gridAdapter
+        viewPager.adapter = viewPagerAdapter
+        /*viewPager?.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
+
+            override fun onPageScrollStateChanged(state: Int) {
+            }
+
+            override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {
+                if(position==0) findViewById<ImageView>(R.id.thisCount).setImageResource(R.drawable.home_button)
+                if(position==1) findViewById<ImageView>(R.id.thisCount).setImageResource(R.drawable.archive_button)
+                //if(position==0) findViewById<ImageView>(R.id.thisCount).setImageResource(R.drawable.home_button)
+            }
+
+            override fun onPageSelected(position: Int) {
+            }
+        })*/
     }
 
     /**

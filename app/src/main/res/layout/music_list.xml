@@ -8,10 +8,74 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="384dp"
+        android:layout_width="match_parent"
         android:layout_height="178dp"
-        android:src="@drawable/driving"
-        android:scaleType="fitXY"/>
+        android:scaleType="fitXY"
+        android:src="@drawable/travel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/listProfile"
+        android:layout_width="63dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@+id/listName"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/profile" />
+
+    <TextView
+        android:id="@+id/listName"
+        android:layout_width="62dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="TextView"
+        android:textColor="@android:color/background_light"
+        android:textSize="10dp"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/listProfile" />
+
+    <TextView
+        android:id="@+id/listDescrip"
+        android:layout_width="388dp"
+        android:layout_height="54dp"
+        android:background="#9eaaaaaa"
+        android:gravity="left|center"
+        android:text="쪄죽을뻔 했지만 그래도 친구들과 드라이빙 하면서 좋은 시간을 보낸 것 같다~~~ 개꿀잼 개이득~~~"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="@+id/listName" />
+
+    <TextView
+        android:id="@+id/listTitle"
+        android:layout_width="208dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:text="치앙마이"
+        android:textColor="@android:color/background_light"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/listTag"
+        app:layout_constraintStart_toEndOf="@+id/listProfile" />
+
+    <TextView
+        android:id="@+id/listTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="108dp"
+        android:text="#태국 #우정여행 #치앙마이"
+        android:textColor="@android:color/background_light"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/listDescrip"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ListView
         android:id="@+id/myListView"

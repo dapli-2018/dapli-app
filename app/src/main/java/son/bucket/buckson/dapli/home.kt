@@ -24,4 +24,5 @@ class home : Fragment() {
         feedlist.adapter = feedAdapter
         Log.d("HOME", "add adapter")
     }
+
 }

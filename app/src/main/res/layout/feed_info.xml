@@ -8,48 +8,48 @@
 
     <ImageView
         android:id="@+id/Layout"
-        android:layout_width="match_parent"
-        android:layout_height="157dp"
+        android:layout_width="371dp"
+        android:layout_height="154dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/layout" />
 
     <ImageView
         android:id="@+id/profile"
         android:layout_width="56dp"
         android:layout_height="56dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:contentDescription="profileImage"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/Layout"
+        app:layout_constraintStart_toStartOf="@+id/userName"
         app:layout_constraintTop_toTopOf="@+id/Layout"
-        app:layout_constraintVertical_bias="0.215"
         app:srcCompat="@drawable/profile" />
 
     <TextView
         android:id="@+id/memoryTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/profile"
-        app:layout_constraintTop_toTopOf="@+id/profile"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/Layout"
         tools:text="Name" />
 
     <TextView
         android:id="@+id/userName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
         android:gravity="center"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -59,12 +59,11 @@
 
     <TextView
         android:id="@+id/memoryDescirpt"
-        android:layout_width="266dp"
-        android:layout_height="102dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="262dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="8dp"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/Layout"
-        app:layout_constraintStart_toStartOf="@+id/memoryTitle"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
         app:layout_constraintTop_toBottomOf="@+id/memoryTitle"
         tools:text="This is contents of chat." />
 
@@ -98,7 +97,7 @@
         android:layout_marginTop="16dp"
         android:background="@drawable/pin"
         android:scaleType="fitXY"
-        app:layout_constraintEnd_toEndOf="@+id/Layout"
+        app:layout_constraintEnd_toEndOf="@+id/memoryDescirpt"
         app:layout_constraintTop_toTopOf="@+id/Layout" />
 
     <TextView
@@ -111,5 +110,14 @@
         android:text="1000"
         app:layout_constraintEnd_toStartOf="@+id/pickBtn"
         app:layout_constraintTop_toTopOf="@+id/Layout" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="16dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toEndOf="@+id/profile"
+        app:layout_constraintTop_toTopOf="@+id/Layout"
+        app:srcCompat="@drawable/bar" />
 
 </android.support.constraint.ConstraintLayout>
