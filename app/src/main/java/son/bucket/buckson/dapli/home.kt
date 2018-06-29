@@ -12,15 +12,15 @@ class home : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View {
         Log.d("HOME", "createview")
-        return inflater!!.inflate(R.layout.music_list, null)
+        return inflater!!.inflate(R.layout.mainfeed, null)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
         Log.d("HOME", "adapter")
-        var musicAdapter = ListAdapter(context, DataService.MusicData)
-        myListView.adapter = musicAdapter
+        var feedAdapter = FeedAdapter(context, FeedService.FeedData)
+        myListView.adapter = feedAdapter
         Log.d("HOME", "add adapter")
     }
 }
