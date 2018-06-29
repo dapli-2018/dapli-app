@@ -1,5 +1,4 @@
 package son.bucket.buckson.dapli
 
-class homeView {
-
+class home {
 }
