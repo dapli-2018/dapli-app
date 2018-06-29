@@ -16,6 +16,7 @@ class FeedAdapter (val context: Context, val feedData: ArrayList<FeedData>) : Ba
 
         if(convertView == null) {
             feed = LayoutInflater.from(context).inflate(R.layout.feed_info, null)
+            feed.setBackgroundResource(R.drawable.rounded_corner])
             holder = ViewHolder()
             holder.memoryTitle = feed.findViewById(R.id.memoryTitle)
             holder.memoryDesc = feed.findViewById(R.id.memoryDescirpt)
