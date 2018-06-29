@@ -10,7 +10,11 @@ class pagerAdapter(fragmentManager: FragmentManager) :
 {
     val fragments = ArrayList<Fragment>()
 
-    override fun getItem(position: Int): Fragment = fragments[position]
+    override fun getItem(position: Int): Fragment
+    {
+        Log.d("get", "ITEM: " + position)
+        return fragments[position]
+    }
 
     override fun getCount(): Int = fragments.size
 

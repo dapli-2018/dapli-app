@@ -39,11 +39,12 @@
         android:id="@+id/PickText"
         android:layout_width="88dp"
         android:layout_height="30dp"
+        android:layout_marginStart="100dp"
         android:layout_marginTop="8dp"
         android:gravity="center"
         android:text="Pick"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="244dp" />
+        app:layout_constraintStart_toEndOf="@+id/Liketext"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/PlayLists"

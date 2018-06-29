@@ -1,6 +1,7 @@
 package son.bucket.buckson.dapli
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -34,7 +35,6 @@ class FeedAdapter (val context: Context, val feedData: ArrayList<FeedData>) : Ba
 
         val fd = feedData[position]
 
-
         holder.profileImage?.setImageResource(fd.photo)
         //holder.profileImage?.
         holder.memoryTitle?.text = fd.title
@@ -42,6 +42,14 @@ class FeedAdapter (val context: Context, val feedData: ArrayList<FeedData>) : Ba
         holder.memoryLikes?.text = fd.likes
         holder.pickNums?.text = fd.picks
         holder.profileName?.text = fd.name
+
+        feed.setOnClickListener(object : View.OnClickListener {
+            internal var buttonClickFlag: Boolean = false
+
+            override fun onClick(v: View?) {
+                Log.d("CLICK", "ID : " +  feedData[position].name)
+            }
+        })
 
         return feed
     }
