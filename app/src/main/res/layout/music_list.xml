@@ -10,7 +10,7 @@
         android:id="@+id/imageView"
         android:layout_width="384dp"
         android:layout_height="178dp"
-        android:src="@mipmap/ic_launcher"
+        android:src="@drawable/driving"
         android:scaleType="fitXY"/>
 
     <ListView

@@ -7,18 +7,32 @@
     android:layout_height="wrap_content">
 
     <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="157dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/layout" />
+
+    <ImageView
         android:id="@+id/profile"
         android:layout_width="56dp"
         android:layout_height="56dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:contentDescription="profileImage"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@mipmap/ic_launcher_round" />
+        app:layout_constraintVertical_bias="0.178"
+        app:srcCompat="@drawable/profile" />
 
     <TextView
         android:id="@+id/memoryTitle"
@@ -32,30 +46,66 @@
         tools:text="Name" />
 
     <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/profile"
+        tools:text="Name" />
+
+    <TextView
         android:id="@+id/memoryDescirpt"
-        android:layout_width="285dp"
-        android:layout_height="57dp"
+        android:layout_width="266dp"
+        android:layout_height="102dp"
         android:layout_marginBottom="8dp"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
         app:layout_constraintStart_toStartOf="@+id/memoryTitle"
+        app:layout_constraintTop_toBottomOf="@+id/memoryTitle"
         tools:text="This is contents of chat." />
 
     <ImageButton
         android:id="@+id/likebtn"
         android:layout_width="18dp"
         android:layout_height="20dp"
+        android:layout_marginStart="8dp"
         android:background="@drawable/heart"
         android:scaleType="fitXY"
-        tools:layout_editor_absoluteX="51dp"
-        tools:layout_editor_absoluteY="76dp" />
+        app:layout_constraintStart_toEndOf="@+id/likesNum"
+        app:layout_constraintTop_toBottomOf="@+id/userName" />
 
     <TextView
         android:id="@+id/likesNum"
-        android:layout_width="40dp"
+        android:layout_width="47dp"
         android:layout_height="19dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="16dp"
+        android:gravity="center"
         android:text="1000"
-        app:layout_constraintTop_toBottomOf="@+id/profile"
-        tools:layout_editor_absoluteX="8dp" />
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/userName" />
+
+    <ImageButton
+        android:id="@+id/pickBtn"
+        android:layout_width="18dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/pin"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toEndOf="@+id/pickNum"
+        app:layout_constraintTop_toBottomOf="@+id/likebtn" />
+
+    <TextView
+        android:id="@+id/pickNum"
+        android:layout_width="47dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="16dp"
+        android:gravity="center"
+        android:text="1000"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/likesNum" />
+
 </android.support.constraint.ConstraintLayout>

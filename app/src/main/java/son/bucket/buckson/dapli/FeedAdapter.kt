@@ -14,14 +14,17 @@ class FeedAdapter (val context: Context, val feedData: ArrayList<FeedData>) : Ba
         val feed: View
         val holder : ViewHolder
 
+        //FeedService.addData(FeedData("후..", "아피곤하다", R.drawable.profile,"115", "6", "신수철"))
+
         if(convertView == null) {
             feed = LayoutInflater.from(context).inflate(R.layout.feed_info, null)
-            feed.setBackgroundResource(R.drawable.rounded_corner])
             holder = ViewHolder()
             holder.memoryTitle = feed.findViewById(R.id.memoryTitle)
             holder.memoryDesc = feed.findViewById(R.id.memoryDescirpt)
             holder.memoryLikes = feed.findViewById(R.id.likesNum)
             holder.profileImage = feed.findViewById(R.id.musicThumbnail)
+            holder.pickNums = feed.findViewById(R.id.pickNum)
+            holder.profileName = feed.findViewById(R.id.userName)
 
             feed.tag = holder
         } else {
@@ -37,6 +40,8 @@ class FeedAdapter (val context: Context, val feedData: ArrayList<FeedData>) : Ba
         holder.memoryTitle?.text = fd.title
         holder.memoryDesc?.text = fd.text
         holder.memoryLikes?.text = fd.likes
+        holder.pickNums?.text = fd.picks
+        holder.profileName?.text = fd.name
 
         return feed
     }
@@ -52,5 +57,7 @@ class FeedAdapter (val context: Context, val feedData: ArrayList<FeedData>) : Ba
         var memoryDesc : TextView? = null
         var memoryLikes : TextView? = null
         var profileImage : ImageView? = null
+        var profileName : TextView? = null
+        var pickNums : TextView? = null
     }
 }
