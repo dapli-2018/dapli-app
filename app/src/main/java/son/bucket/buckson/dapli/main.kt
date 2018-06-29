@@ -11,11 +11,12 @@ class main : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.archive_list)
 
         var musicAdapter = ListAdapter(this, DataService.MusicData)
         (myListView as ListView).adapter = musicAdapter
 
+        var gridAdapter = ListAdapter(this, GridService.GridData)
     }
 
     /**

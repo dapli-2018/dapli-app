@@ -9,13 +9,13 @@
     android:padding="15dp">
 
     <ImageView
-        android:id="@+id/imgFood"
+        android:id="@+id/memImg"
         android:layout_width="150dp"
         android:layout_height="120dp"
         app:srcCompat="@drawable/marvingaye" />
 
     <TextView
-        android:id="@+id/tvName"
+        android:id="@+id/memTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"

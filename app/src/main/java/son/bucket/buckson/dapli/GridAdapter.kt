@@ -8,45 +8,41 @@ import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
 
-
-class GridAdapter (val context: Context, val musicData: ArrayList<GridList>) : BaseAdapter()
+class GridAdapter (val context: Context, val gridData: ArrayList<GridData>) : BaseAdapter()
 {
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        val musicView: View
+        val gridView: View
         val holder : ViewHolder
 
         if(convertView == null) {
-            musicView = LayoutInflater.from(context).inflate(R.layout.music_list_item, null)
+            gridView = LayoutInflater.from(context).inflate(R.layout.archive_list, null)
             holder = ViewHolder()
-            holder.musicName = musicView.findViewById(R.id.musicName)
-            holder.musicSinger = musicView.findViewById(R.id.musicSinger)
-            holder.musicThumbnail = musicView.findViewById(R.id.musicThumbnail)
+            holder.memTitle = gridView.findViewById(R.id.memTitle)
+            holder.memImg = gridView.findViewById(R.id.memImg)
 
-            musicView.tag = holder
+            gridView.tag = holder
         } else {
             holder = convertView.tag as ViewHolder
-            musicView = convertView
+            gridView = convertView
         }
 
-        val msc = musicData[position]
+        val msc = gridData[position]
 
         val resourceId = context.resources.getIdentifier(msc.photo, "drawable", context.packageName)
-        holder.musicThumbnail?.setImageResource(resourceId)
-        holder.musicName?.text = msc.name
-        holder.musicSinger?.text = msc.singer
+        holder.memImg?.setImageResource(resourceId)
+        holder.memTitle?.text = msc.title
 
-        return musicView
+        return gridView
     }
 
-    override fun getItem(position: Int) = musicData[position]
+    override fun getItem(position: Int) = gridData[position]
 
     override fun getItemId(position: Int) = position.toLong()
 
-    override fun getCount() = musicData.size
+    override fun getCount() = gridData.size
 
     private class ViewHolder {
-        var musicName : TextView? = null
-        var musicSinger : TextView? = null
-        var musicThumbnail : ImageView? = null
+        var memTitle : TextView? = null
+        var memImg : ImageView? = null
     }
 }
