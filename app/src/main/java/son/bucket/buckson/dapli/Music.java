@@ -5,11 +5,13 @@ public class Music {
 	private String title;
 	private int index;
 	private String spot;
+	private boolean do_play;
 	
 	public Music(String _title, int _index, String _spot) {
 		this.title = _title;
 		this.index = _index;
 		this.spot = _spot;
+		this.do_play = false;
 	}
 
 	public String get_title() {
@@ -33,6 +35,14 @@ public class Music {
 	}
 
 	public void set_spot(String _spot) {
-		this.spot = spot;
+		this.spot = _spot;
+	}
+
+	public boolean get_do_play() {
+		return do_play;
+	}
+
+	public void set_do_play(boolean _do_play) {
+		this.do_play = _do_play;
 	}
 }

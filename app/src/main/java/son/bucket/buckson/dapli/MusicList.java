@@ -40,4 +40,24 @@ public class MusicList {
 		
 		return music_name_list;
 	}
+	
+	public String get_json_music_list() {
+		Iterator<Music> iter = music_list.iterator();
+		String json_music_list= "";
+		Music entry = (Music)iter.next();
+		
+		if(entry != null){ json_music_list = get_json_stringify_music(entry);}
+		
+		while( iter.hasNext()) {
+			entry = (Music)iter.next();
+			json_music_list += "," + get_json_stringify_music(entry);
+		}
+		
+		return json_music_list;
+	}
+	
+	private String get_json_stringify_music(Music _entry) {
+		return String.format("\"title\":\"%s\",\"do_play\":%b",
+				_entry.get_title(), _entry.get_do_play());
+	}
 }
