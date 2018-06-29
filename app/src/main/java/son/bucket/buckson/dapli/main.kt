@@ -14,8 +14,6 @@ class main : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-
         var viewPagerAdapter = pagerAdapter(manager)
         viewPagerAdapter.addFrag(home())
         //viewPagerAdapter.addFrag(list())
