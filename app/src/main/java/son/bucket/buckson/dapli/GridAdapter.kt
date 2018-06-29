@@ -5,32 +5,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
-import android.widget.ImageView
-import android.widget.TextView
+import kotlinx.android.synthetic.main.grid_items.view.*
 
 class GridAdapter (val context: Context, val gridData: ArrayList<GridData>) : BaseAdapter()
 {
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        val gridView: View
-        val holder : ViewHolder
+        val grid = gridData[position]
 
-        if(convertView == null) {
-            gridView = LayoutInflater.from(context).inflate(R.layout.archive_list, null)
-            holder = ViewHolder()
-            holder.memTitle = gridView.findViewById(R.id.memTitle)
-            holder.memImg = gridView.findViewById(R.id.memImg)
+        var inflator = context!!.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        var gridView = inflator.inflate(R.layout.archive_list, null)
 
-            gridView.tag = holder
-        } else {
-            holder = convertView.tag as ViewHolder
-            gridView = convertView
-        }
-
-        val msc = gridData[position]
-
-        val resourceId = context.resources.getIdentifier(msc.photo, "drawable", context.packageName)
-        holder.memImg?.setImageResource(resourceId)
-        holder.memTitle?.text = msc.title
+        val resourceId = context.resources.getIdentifier(grid.photo, "drawable", context.packageName)
+        gridView.memImg.setImageResource(resourceId)
+        gridView.memTitle.text = grid.title
 
         return gridView
     }
@@ -41,8 +28,4 @@ class GridAdapter (val context: Context, val gridData: ArrayList<GridData>) : Ba
 
     override fun getCount() = gridData.size
 
-    private class ViewHolder {
-        var memTitle : TextView? = null
-        var memImg : ImageView? = null
-    }
 }
