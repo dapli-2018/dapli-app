@@ -14,6 +14,7 @@ class main : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         var viewPagerAdapter = pagerAdapter(manager)
+        viewPagerAdapter.addFrag(home())
         viewPager = findViewById(R.id.viewPager)
         viewPager.adapter = viewPagerAdapter
         //var musicAdapter = ListAdapter(this, DataService.MusicData)
