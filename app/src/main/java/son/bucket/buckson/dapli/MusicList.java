@@ -28,4 +28,16 @@ public class MusicList {
 	public Iterator<Music> get_iterator(){
 		return music_list.iterator();
 	}
+	
+	public ArrayList<String> get_music_name_list(){
+		Iterator<Music> iter = music_list.iterator();
+		ArrayList<String> music_name_list = new ArrayList<String>();
+		
+		while( iter.hasNext()){
+			Music entry = (Music)iter.next();
+			music_name_list.add(entry.get_title());
+		}
+		
+		return music_name_list;
+	}
 }

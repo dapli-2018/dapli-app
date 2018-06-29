@@ -23,7 +23,6 @@ public class SpotMusicList {
 		while( iter.hasNext()){
 			Music entry = (Music)iter.next();
 			String spot = entry.get_spot();
-			
 			if( !trip_spots_music_list.containsKey(spot)) {
 				MusicList temp_music_list = new MusicList();
 				temp_music_list.add_music(entry);
