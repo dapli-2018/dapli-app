@@ -14,7 +14,8 @@
         android:layout_marginStart="28dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Liketext"
-        app:srcCompat="@drawable/marvingaye" />
+        app:srcCompat="@drawable/ddududdudu"
+        android:scaleType="fitXY"/>
 
     <TextView
         android:id="@+id/Liketext"
@@ -33,7 +34,8 @@
         android:layout_marginEnd="28dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/PickText"
-        app:srcCompat="@drawable/marvingaye" />
+        app:srcCompat="@drawable/travel"
+        android:scaleType="fitXY"/>
 
     <TextView
         android:id="@+id/PickText"
@@ -42,7 +44,7 @@
         android:layout_marginStart="100dp"
         android:layout_marginTop="8dp"
         android:gravity="center"
-        android:text="Pick"
+        android:text="Keep"
         app:layout_constraintStart_toEndOf="@+id/Liketext"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -54,6 +56,7 @@
         android:layout_marginTop="36dp"
         android:gravity="center"
         android:text="PlayList"
+        android:textSize="25dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/LikePhoto" />

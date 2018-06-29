@@ -19,7 +19,6 @@ class GridAdapter (val context: Context, val gridData: ArrayList<GridData>) : Ba
         val resourceId = context.resources.getIdentifier(grid.photo, "drawable", context.packageName)
         Log.d("Feed", "ID : " + resourceId)
         gridView.memImg?.setImageResource(resourceId)
-        gridView.memTitle?.text = grid.title
 
         return gridView
     }

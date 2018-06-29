@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.support.v4.view.ViewPager
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
+import android.widget.ImageView
 
 class main : AppCompatActivity() {
 
@@ -22,7 +23,7 @@ class main : AppCompatActivity() {
         viewPager = findViewById(R.id.viewPager)
 
         viewPager.adapter = viewPagerAdapter
-        /*viewPager?.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
+        viewPager?.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
 
             override fun onPageScrollStateChanged(state: Int) {
             }
@@ -35,7 +36,7 @@ class main : AppCompatActivity() {
 
             override fun onPageSelected(position: Int) {
             }
-        })*/
+        })
     }
 
     /**

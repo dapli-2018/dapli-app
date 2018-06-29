@@ -23,9 +23,10 @@ class FeedAdapter (val context: Context, val feedData: ArrayList<FeedData>) : Ba
             holder.memoryTitle = feed.findViewById(R.id.memoryTitle)
             holder.memoryDesc = feed.findViewById(R.id.memoryDescirpt)
             holder.memoryLikes = feed.findViewById(R.id.likesNum)
-            holder.profileImage = feed.findViewById(R.id.musicThumbnail)
+            holder.profileImage = feed.findViewById(R.id.profile)
             holder.pickNums = feed.findViewById(R.id.pickNum)
             holder.profileName = feed.findViewById(R.id.userName)
+            holder.hashtags = feed.findViewById(R.id.hashTag)
 
             feed.tag = holder
         } else {
@@ -35,13 +36,15 @@ class FeedAdapter (val context: Context, val feedData: ArrayList<FeedData>) : Ba
 
         val fd = feedData[position]
 
-        holder.profileImage?.setImageResource(fd.photo)
+        val resourceId = context.resources.getIdentifier(fd.photo, "drawable", context.packageName)
+        holder.profileImage?.setImageResource(resourceId)
         //holder.profileImage?.
         holder.memoryTitle?.text = fd.title
         holder.memoryDesc?.text = fd.text
         holder.memoryLikes?.text = fd.likes
         holder.pickNums?.text = fd.picks
         holder.profileName?.text = fd.name
+        holder.hashtags?.text = fd.hashTag
 
         feed.setOnClickListener(object : View.OnClickListener {
             internal var buttonClickFlag: Boolean = false
@@ -66,6 +69,7 @@ class FeedAdapter (val context: Context, val feedData: ArrayList<FeedData>) : Ba
         var memoryLikes : TextView? = null
         var profileImage : ImageView? = null
         var profileName : TextView? = null
+        var hashtags : TextView? = null
         var pickNums : TextView? = null
     }
 }

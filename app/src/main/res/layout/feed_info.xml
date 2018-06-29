@@ -26,7 +26,7 @@
         android:id="@+id/profile"
         android:layout_width="56dp"
         android:layout_height="56dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:contentDescription="profileImage"
         app:layout_constraintStart_toStartOf="@+id/userName"
         app:layout_constraintTop_toTopOf="@+id/Layout"
@@ -42,14 +42,13 @@
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
         app:layout_constraintTop_toTopOf="@+id/Layout"
-        tools:text="Name" />
+        tools:text="Title" />
 
     <TextView
         android:id="@+id/userName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
         android:gravity="center"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -58,13 +57,26 @@
         tools:text="Name" />
 
     <TextView
-        android:id="@+id/memoryDescirpt"
-        android:layout_width="262dp"
-        android:layout_height="95dp"
+        android:id="@+id/hashTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
         app:layout_constraintTop_toBottomOf="@+id/memoryTitle"
+        tools:text="HashTag" />
+
+    <TextView
+        android:id="@+id/memoryDescirpt"
+        android:layout_width="339dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/Layout"
+        app:layout_constraintTop_toBottomOf="@+id/userName"
         tools:text="This is contents of chat." />
 
     <ImageButton
@@ -113,9 +125,9 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="16dp"
-        android:layout_height="94dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="10dp"
+        android:layout_height="81dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintStart_toEndOf="@+id/profile"
         app:layout_constraintTop_toTopOf="@+id/Layout"
         app:srcCompat="@drawable/bar" />

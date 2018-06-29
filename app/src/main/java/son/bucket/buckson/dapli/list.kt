@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
 import kotlinx.android.synthetic.main.music_list.*
 
 class list : Fragment() {
@@ -21,6 +22,10 @@ class list : Fragment() {
         Log.d("LIST", "adapter")
         var musicAdapter = ListAdapter(context, DataService.MusicData)
         myListView.adapter = musicAdapter
+        myListView.onItemClickListener = AdapterView.OnItemClickListener { parent, view, position, id ->
+            val selectedItem = parent.getItemAtPosition(position)
+            myListView.getItemAtPosition(position)
+        }
         Log.d("LIST", "add adapter")
     }
 }

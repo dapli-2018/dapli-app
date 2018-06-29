@@ -8,6 +8,13 @@
 
 
     <ImageView
+        android:id="@+id/backGround"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/bg" />
+
+    <ImageView
         android:id="@+id/thisCount"
         android:layout_width="match_parent"
         android:layout_height="21dp"

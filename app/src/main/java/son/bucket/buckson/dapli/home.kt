@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
 import kotlinx.android.synthetic.main.mainfeed.*
 
 class home : Fragment() {
@@ -22,6 +23,10 @@ class home : Fragment() {
         var feedAdapter = FeedAdapter(context, FeedService.FeedData)
 //        feedAdapter.
         feedlist.adapter = feedAdapter
+        feedlist.onItemClickListener = AdapterView.OnItemClickListener { parent, view, position, id ->
+            val selectedItem = parent.getItemAtPosition(position)
+            feedlist.getItemAtPosition(position)
+        }
         Log.d("HOME", "add adapter")
     }
 

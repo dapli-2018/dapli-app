@@ -1,11 +1,11 @@
 package son.bucket.buckson.dapli
 
-class GridData(val title: String, val photo: String)
+class GridData( val photo: String)
 
 object GridService{
     val GridData = arrayListOf(
-            GridData("치앙마이", "driving"),
-            GridData("다플리", "heart_red"),
-            GridData("후쿠오카", "marvingaye")
+            GridData("travel"),
+            GridData("heart_red"),
+            GridData("marvingaye")
     )
 }
