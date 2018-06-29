@@ -6,17 +6,24 @@ public class MusicListManager {
 	private PersonalMusicList my_music_list;
 	private ArrayList<PersonalMusicList> others_music_list;
 	private SpotMusicList group_spot_music_list;
+	private boolean do_repeat_playList;
 	
 	// constructor
 	public MusicListManager() {
 		this.my_music_list = new PersonalMusicList();
 		this.others_music_list = new ArrayList<PersonalMusicList>();
-		group_spot_music_list = new SpotMusicList();
+		this.group_spot_music_list = new SpotMusicList();
+		
+		// follow the configuration
+		do_repeat_playList = false;
 	}
 	public MusicListManager(MusicList _my_music_list) {
 		this.my_music_list = new PersonalMusicList(_my_music_list);
 		this.others_music_list = new ArrayList<PersonalMusicList>();
-		group_spot_music_list = new SpotMusicList(_my_music_list);
+		this.group_spot_music_list = new SpotMusicList(_my_music_list);
+		
+		// follow the configuration
+		do_repeat_playList = false;
 	}
 	
 	//methods
