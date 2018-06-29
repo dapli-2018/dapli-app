@@ -7,31 +7,33 @@
     android:layout_height="match_parent"
     tools:context="son.bucket.buckson.dapli.main">
 
-    <TextBox
+    <TextView
         android:id="@+id/mainTopText"
-        android:layout_width="290dp"
-        android:layout_height="40dp"
+        android:layout_width="285dp"
+        android:layout_height="26dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="검색"
+        android:text="Music"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:layout_width="66dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="8dp"
-        android:text="검색"
-        app:layout_constraintStart_toEndOf="@+id/mainTopText"
-        tools:layout_editor_absoluteY="6dp" />
+        android:layout_width="80dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="2dp"
+        android:text="search"
+        android:textSize="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
         android:id="@+id/myListView"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="527dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
