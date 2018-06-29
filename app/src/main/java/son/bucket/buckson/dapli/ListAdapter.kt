@@ -37,17 +37,11 @@ class ListAdapter (val context: Context, val musicData: ArrayList<MusicData>) : 
         return musicView
     }
 
-    override fun getItem(position: Int): Any {
-        return musicData[position]
-    }
+    override fun getItem(position: Int) = musicData[position]
 
-    override fun getItemId(position: Int): Long {
-        return 0
-    }
+    override fun getItemId(position: Int) = position.toLong()
 
-    override fun getCount(): Int {
-        return musicData.size
-    }
+    override fun getCount() = musicData.size
 
     private class ViewHolder {
         var musicName : TextView? = null

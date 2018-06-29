@@ -2,16 +2,20 @@ package son.bucket.buckson.dapli
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.widget.ListView
 import kotlinx.android.synthetic.main.activity_main.*
 
 class main : AppCompatActivity() {
+
+    var listView: ListView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         var musicAdapter = ListAdapter(this, DataService.MusicData)
-        myListView.adapter = musicAdapter
+        (myListView as ListView).adapter = musicAdapter
+
     }
 
     /**
