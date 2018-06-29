@@ -6,7 +6,7 @@
     android:background="#ddd"
     android:gravity="center"
     android:orientation="vertical"
-    android:padding="15dp">
+    android:padding="10dp">
 
     <ImageView
         android:id="@+id/memImg"

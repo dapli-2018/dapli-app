@@ -11,15 +11,15 @@ import kotlinx.android.synthetic.main.grid_items.view.*
 class GridAdapter (val context: Context, val gridData: ArrayList<GridData>) : BaseAdapter()
 {
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        val grid = gridData[position]
+            val grid = gridData[position]
 
         var inflator = context!!.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         var gridView = inflator.inflate(R.layout.archive_list, null)
 
         val resourceId = context.resources.getIdentifier(grid.photo, "drawable", context.packageName)
         Log.d("Feed", "ID : " + resourceId)
-        gridView.memImg.setImageResource(resourceId)
-        gridView.memTitle.text = grid.title
+        gridView.memImg?.setImageResource(resourceId)
+        gridView.memTitle?.text = grid.title
 
         return gridView
     }
