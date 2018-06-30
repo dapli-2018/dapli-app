@@ -4,10 +4,10 @@ class MusicData(val name: String, val singer: String, val photo: String)
 
 object DataService{
     val MusicData = arrayListOf(
-            MusicData("LATATA", "(girl)IDLE", "Jacket_latata"),
-            MusicData("Marvin Gaye", "Charlie Puth", "marvingaye.jpg"),
-            MusicData("MIC DROP", "BTS", "Jacket_micdrop"),
-            MusicData("Stars", "ROTHY", "Jacket_stars"),
-            MusicData("DDU-DU DDU-DU", "BLACK PINK", "Jacket_ddududdudu")
+            MusicData("Forever Young", "BLACK PINK", "ddududdudu"),
+            MusicData("LATATA", "(girl)IDLE", "latata"),
+            MusicData("Marvin Gaye", "Charlie Puth", "marvingaye"),
+            MusicData("MIC DROP", "BTS", "micdrop"),
+            MusicData("Stars", "ROTHY", "stars")
     )
 }

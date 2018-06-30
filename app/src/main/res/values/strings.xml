@@ -2,4 +2,5 @@
     <string name="app_name">Dapli</string>
     <string name="chatphotoimg" />
     <string name="musicthumbnail" />
+    <string name="title_activity_lists">lists</string>
 </resources>

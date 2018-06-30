@@ -39,4 +39,15 @@
         app:layout_constraintStart_toStartOf="@+id/myMusic"
         tools:text="This is contents of chat." />
 
+    <ImageButton
+        android:id="@+id/like"
+        android:layout_width="35dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="8dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/heart"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="15dp" />
+
 </android.support.constraint.ConstraintLayout>

@@ -9,7 +9,7 @@ import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
 
-class ListAdapter (val context: Context, val musicData: ArrayList<MusicData>) : BaseAdapter()
+class myListAdapter (val context: Context, val musicData: ArrayList<MyMusicData>) : BaseAdapter()
 {
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         val musicView: View
@@ -19,7 +19,6 @@ class ListAdapter (val context: Context, val musicData: ArrayList<MusicData>) : 
             musicView = LayoutInflater.from(context).inflate(R.layout.music_list_item, null)
             holder = ViewHolder()
             holder.musicName = musicView.findViewById(R.id.myMusic)
-
             holder.musicSinger = musicView.findViewById(R.id.myArtist)
             holder.musicThumbnail = musicView.findViewById(R.id.myThumbnail)
 
@@ -48,7 +47,6 @@ class ListAdapter (val context: Context, val musicData: ArrayList<MusicData>) : 
 
     private class ViewHolder {
         var musicName : TextView? = null
-        var userName : TextView? = null
         var musicSinger : TextView? = null
         var musicThumbnail : ImageView? = null
     }

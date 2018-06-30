@@ -16,6 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".lists"
+            android:label="@string/title_activity_lists"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".playlists"></activity>
     </application>
 
 </manifest>

@@ -1,6 +1,7 @@
 package son.bucket.buckson.dapli
 
 import android.content.Context
+import android.content.Intent
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -50,6 +51,8 @@ class FeedAdapter (val context: Context, val feedData: ArrayList<FeedData>) : Ba
             internal var buttonClickFlag: Boolean = false
 
             override fun onClick(v: View?) {
+                val intent = Intent(context, lists::class.java)
+                context.startActivity(intent)
                 Log.d("CLICK", "ID : " +  feedData[position].name)
             }
         })

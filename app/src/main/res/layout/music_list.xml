@@ -10,6 +10,9 @@
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="178dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:scaleType="fitXY"
         android:src="@drawable/travel"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,6 +26,26 @@
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="@+id/listName"
         app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/sin" />
+
+    <ImageView
+        android:id="@+id/listProfile2"
+        android:layout_width="31dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:srcCompat="@drawable/profile" />
+
+    <ImageView
+        android:id="@+id/listProfile3"
+        android:layout_width="31dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/listProfile2"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
         app:srcCompat="@drawable/profile" />
 
     <TextView
@@ -32,24 +55,26 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:gravity="center"
-        android:text="TextView"
+        android:text="신수철"
         android:textColor="@android:color/background_light"
         android:textSize="10dp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/listProfile" />
 
     <TextView
         android:id="@+id/listDescrip"
-        android:layout_width="388dp"
+        android:layout_width="match_parent"
         android:layout_height="54dp"
+        android:layout_marginStart="8dp"
         android:background="#9eaaaaaa"
         android:gravity="left|center"
         android:text="쪄죽을뻔 했지만 그래도 친구들과 드라이빙 하면서 좋은 시간을 보낸 것 같다~~~ 개꿀잼 개이득~~~"
         android:textColor="@android:color/background_light"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.9"
-        app:layout_constraintStart_toStartOf="@+id/listName" />
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView" />
 
     <TextView
         android:id="@+id/listTitle"
@@ -79,14 +104,15 @@
 
     <ListView
         android:id="@+id/myListView"
-        android:layout_width="0dp"
-        android:layout_height="382dp"
+        android:layout_width="match_parent"
+        android:layout_height="344dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/listDescrip"
+        app:layout_constraintVertical_bias="0.448" />
 
 </android.support.constraint.ConstraintLayout>

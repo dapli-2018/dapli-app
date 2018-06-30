@@ -7,72 +7,35 @@
     android:layout_height="match_parent"
     tools:context="son.bucket.buckson.dapli.home">
 
-    <ImageView
-        android:id="@+id/LikePhoto"
-        android:layout_width="143dp"
-        android:layout_height="133dp"
-        android:layout_marginStart="28dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Liketext"
-        app:srcCompat="@drawable/ddududdudu"
-        android:scaleType="fitXY"/>
 
-    <TextView
-        android:id="@+id/Liketext"
-        android:layout_width="91dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
-        android:text="Like"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="54dp" />
+    <android.support.v4.view.ViewPager
+        android:id="@+id/gridviewPager"
+        android:layout_width="wrap_content"
+        android:layout_height="486dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
-        android:id="@+id/PickPhoto"
-        android:layout_width="143dp"
-        android:layout_height="133dp"
-        android:layout_marginEnd="28dp"
+    <ImageButton
+        android:id="@+id/archive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/menu_memento_white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PickText"
-        app:srcCompat="@drawable/travel"
-        android:scaleType="fitXY"/>
-
-    <TextView
-        android:id="@+id/PickText"
-        android:layout_width="88dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
-        android:text="Keep"
-        app:layout_constraintStart_toEndOf="@+id/Liketext"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/PlayLists"
-        android:layout_width="91dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="36dp"
-        android:gravity="center"
-        android:text="PlayList"
-        android:textSize="25dp"
-        android:textStyle="bold"
+    <ImageButton
+        android:id="@+id/memento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/menu_arhcive_black"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LikePhoto" />
-
-    <GridView
-        android:id="@+id/myGridView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:columnWidth="150dp"
-        android:horizontalSpacing="15dp"
-        android:numColumns="auto_fit"
-        android:verticalSpacing="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PlayLists" />
-
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

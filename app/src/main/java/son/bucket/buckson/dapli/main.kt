@@ -17,8 +17,10 @@ class main : AppCompatActivity() {
 
         var viewPagerAdapter = pagerAdapter(manager)
         viewPagerAdapter.addFrag(home())
+        //viewPagerAdapter.addFrag(mylist())
         //viewPagerAdapter.addFrag(list())
         viewPagerAdapter.addFrag(repo())
+        viewPagerAdapter.addFrag(memento())
         Log.d("main","size: " + viewPagerAdapter.count)
         viewPager = findViewById(R.id.viewPager)
 
