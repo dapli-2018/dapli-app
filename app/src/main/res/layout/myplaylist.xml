@@ -21,6 +21,29 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/cardview" />
 
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="61dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="@+id/myListView"
+        app:layout_constraintTop_toTopOf="@+id/cardView"
+        app:srcCompat="@drawable/profile" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="163dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="32dp"
+        android:text="치앙마이에서     들을 플레이리스트"
+        android:textColor="@android:color/background_light"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/myListView"
+        app:layout_constraintTop_toTopOf="@+id/cardView" />
+
     <ListView
         android:id="@+id/myListView"
         android:layout_width="313dp"
@@ -28,6 +51,8 @@
         android:layout_marginBottom="56dp"
         android:layout_marginStart="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/cardView" />
+        app:layout_constraintStart_toStartOf="@+id/cardView" >
+
+    </ListView>
 
 </android.support.constraint.ConstraintLayout>

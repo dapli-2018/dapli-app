@@ -21,6 +21,7 @@
             android:label="@string/title_activity_lists"
             android:theme="@style/AppTheme" />
         <activity android:name=".playlists"></activity>
+        <activity android:name=".mylists"></activity>
     </application>
 
 </manifest>
